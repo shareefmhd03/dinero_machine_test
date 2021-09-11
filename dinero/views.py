@@ -1,5 +1,4 @@
 import requests
-import numpy as np
 from django.shortcuts import render
 from decouple import config
 

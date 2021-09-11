@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Error</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<style>
+#wrapper
+{
+ width:500px;
+ margin:0 auto;
+ position:absolute;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+.center {
+display: flex;
+justify-content: center;
+}
+</style>
+</head>
+
+
+<body>
+<div class="center" id="wrapper">
+    <div class="card" style="width: 18rem; border: 5px solid #07e2ff; box-shadow: grey 12px 8px 8px;">
+        <div class="card-body">
+          <h4 class="card-title">Tracking Error of SBI – ETF Nifty Next 50</h4>
+          <h6 class="card-subtitle mb-2 text-muted">From (March - 2021) to (Latest)</h6>
+          <p class="card-text">{{data}}</p>
+          <a href="{%url 'home' %}" class="card-link">Refresh</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>    
+</body>
+</html>
+
+

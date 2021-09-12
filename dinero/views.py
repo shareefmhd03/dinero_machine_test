@@ -1,3 +1,4 @@
+import json
 import requests
 from django.shortcuts import render
 from decouple import config
@@ -15,4 +16,14 @@ def home(request):
     
     # Tracking Error calculation
     tracking_err = "Tracking Error: {0:.2f}%".format(abs(((etf_current/etf_previous-1)-(nifty_current/nifty_previous-1))*100))
+
+
+    # Testing webhooks--------------------------------------->
+    # data = {
+    #     'tracking_error':tracking_err
+    # }
+
+    # webhook_url = 'https://webhook.site/7172fecd-e1a6-4a5c-b3f1-e5001120b425'
+    # requests.post(webhook_url,data = json.dumps(data), headers={'Content-Type':'application/json'})
+
     return render (request,'home.html',{'data':tracking_err})
